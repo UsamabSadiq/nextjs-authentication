@@ -4,7 +4,7 @@ export default function SignUp() {
     const onSubmit = async (email, password) => {
         console.log(email, password);
         try {
-            const response = await fetch('/api/auth/', {
+            const response = await fetch('/api/auth/signup', {
                 method: 'POST',
                 body: JSON.stringify({ email, password }),
                 headers: {
@@ -15,7 +15,7 @@ export default function SignUp() {
                 alert('signup successfull!!')
             }
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
 
     }

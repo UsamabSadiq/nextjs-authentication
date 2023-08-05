@@ -29,7 +29,7 @@ export async function save(email, password) {
     // emailFound ma hum na eik get getByEmail(email) ka function call kra ha with parameter email, jo hamary data ma find kry ga agr email exist kr ta ha ya nhi, agr email pehly sa exists kr ta ha tw wo emailFound ma store ho jaye ga otherwise emailFound undefine dy ga. 
     const emailFound = getByEmail(email)
     if (emailFound) {
-        throw new Error('User Already exists!!')
+        throw new Error("User Already exists!!")
         // throw new Error iss liye use kra ha agr try-catch block ma save ka jaha bhi function call ho ga aur agr waha koi error aye ga tw waha wo catch k block ma chala jaye ga.
     }
     const allUsers = getAll()
